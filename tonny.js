@@ -1,18 +1,20 @@
-const actorarray = [
-  { name: "emily", age: 1983 },
-  { name: "bernard", age: 1987 },
-  { name: "andrew", age: 1980 },
+const bookrarray = [
+  { name: "life force", cost: 20 },
+  { name: "unshakable", cost: 25 },
+  { name: "master the game", cost: 15 },
+  { name: "aa", cost: 11 },
 ];
-let moviecard = ``;
-actorarray.forEach(function (params) {
-  moviecard =
-    moviecard +
+
+let book = ``;
+bookrarray.forEach(function (params) {
+  book =
+    book +
     `
 <div class="info">
-<h3 class="bookcard> ${params.name}</h3>
-<span class="cost">${params.age}</span>
+<h3> ${params.name}</h3>
+<span>${params.cost}</span>
  </div>`;
 });
 
-const sections = document.querySelector(".book");
-sections.innerHTML = moviecard;
+const sections = document.querySelector(".section");
+sections.innerHTML = book;

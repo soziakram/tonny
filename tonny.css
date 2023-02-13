@@ -2,8 +2,6 @@
   box-sizing: border-box;
   margin: 0;
 }
-body {
-}
 
 .covor {
   height: 700px;
@@ -80,7 +78,7 @@ a {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 50%);
-  grid-template-rows: repeat(2, 500px);
+  grid-template-rows: repeat(1, 500px);
 
   gap: 4px;
 }
@@ -98,23 +96,35 @@ h2 {
   padding: 20px;
 }
 
-.book {
+.section {
+  height: auto;
+
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(2, 25%);
-  gap: 1rem;
+  grid-template-rows: repeat(1, 300px);
 }
-.bookcard {
-  background-color: black;
+.info {
+  --card-gradient: rgba(0, 0, 0, 0.8);
+  --card-gradient: #1b1618bc, #f1f5fa;
+  --card-blend-mode: overlay;
+  --card-blend-mode: multiply;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  padding-bottom: 1rem;
+  background-image: linear-gradient(
+    var(--card-gradient),
+    white max(9.5rem, 27vh)
+  );
+  overflow: hidden;
+  margin: 20px;
 }
-.card img {
-  display: flex;
-  justify-content: cover;
-}
-.cost {
-  color: black;
-  height: 300px;
-  width: 300px;
+
+.info h3,
+span {
+  margin-top: 1.2rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 600px) {
